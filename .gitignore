@@ -14,7 +14,7 @@ node_modules/
 .env
 
 # Ignore environment directory
-environment/
+venv/
 
 
 # Ignore macOS system files
