@@ -9,7 +9,13 @@ node_modules/
 
 # Ignore environment variable files
 .env
-venv
+
+# Ignore .env file
+.env
+
+# Ignore environment directory
+environment/
+
 
 # Ignore macOS system files
 .DS_Store
