@@ -13,6 +13,8 @@ node_modules/
 # Ignore .env file
 .env
 
+.gitignore
+
 # Ignore environment directory
 venv/
 
