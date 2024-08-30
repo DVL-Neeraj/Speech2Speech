@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 ibm-watson
+=======
+ibm-watson
+>>>>>>> 77fc82f064e8c966873d01a5760360da65fc1100
 python-dotenv
