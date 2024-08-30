@@ -1,3 +1,31 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore environment variable files
 .env
 venv
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore IDE-specific directories (e.g., JetBrains, Eclipse)
+.idea/
+.project/
 
