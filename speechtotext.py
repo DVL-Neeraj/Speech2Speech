@@ -36,7 +36,7 @@ def speech_to_text(file_path,model_name,speech_to_text_model):
             text += output[i]['alternatives'][0]['transcript']
 
     transcription = {'transcript':text}
-    file_name = file_path.replace('.mp3','')
+    file_name = file_path.split('/')[-1].replace('.mp3','')
     json_path = f'transcripts/{file_name}.json'
     with open(json_path, "w",encoding="utf-8") as json_file:
         json.dump(transcription, json_file, indent=2,ensure_ascii=False)

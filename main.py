@@ -16,8 +16,7 @@ from text_translator import load_credentials_text_translator,load_model,text_tra
 from text2speech import load_credentials_text2speech, text_to_audio
 
 model_name= "de-DE_NarrowbandModel"
-file_path = 'health-german.mp3'
-file_name = file_path.split('.')[0]
+file_path = 'sample_audio/sonja-spart.mp3'
 
 def main(file_path):
     #loading the speech2text output
