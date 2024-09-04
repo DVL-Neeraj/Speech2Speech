@@ -23,18 +23,43 @@ def load_credentials_text2speech():
 
 #file_path = 'translated_text/translated_text.json'
 
-def text_to_audio(file_path,text_to_speech_model):
+# def text_to_audio(file_path,text_to_speech_model):
+#     with open(file_path, "r", encoding="utf-8") as json_file:
+#         data = json.load(json_file)
+
+#     input_text = data['translated_text']
+#     audio_name = file_path.split('/')[-1].replace(".json",".mp3")
+
+#     with open(f"translated_audio/{audio_name}", 'wb') as audio_file:
+#         audio_file.write(
+#             text_to_speech_model.synthesize(
+#                 input_text,
+#                 voice='en-US_AllisonV3Voice',
+#                 accept='audio/mp3'        
+#             ).get_result().content)
+#         print('Done! Audio Converted!')
+
+
+
+def text_to_audio(file_path, text_to_speech_model):
     with open(file_path, "r", encoding="utf-8") as json_file:
         data = json.load(json_file)
 
     input_text = data['translated_text']
-    audio_name = file_path.split('/')[-1].replace(".json",".mp3")
+    audio_name = file_path.split('/')[-1].replace(".json", ".mp3")
+    output_audio_path = f"translated_audio/{audio_name}"
 
-    with open(f"translated_audio/{audio_name}", 'wb') as audio_file:
+    # Make sure the directory exists
+    os.makedirs(os.path.dirname(output_audio_path), exist_ok=True)
+
+    with open(output_audio_path, 'wb') as audio_file:
         audio_file.write(
             text_to_speech_model.synthesize(
                 input_text,
                 voice='en-US_AllisonV3Voice',
-                accept='audio/mp3'        
-            ).get_result().content)
+                accept='audio/mp3'
+            ).get_result().content
+        )
         print('Done! Audio Converted!')
+
+    return output_audio_path

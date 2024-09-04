@@ -19,6 +19,8 @@ def load_speech2text_credentials():
     speech_to_text_model.set_service_url('https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/b430d8ca-eb26-4f91-983e-979c329563ec')
 
     print('speech2text authenticated.')
+    #speech_models = speech_to_text_model.list_models().get_result()
+    #print(json.dumps(speech_models, indent=2))
     return speech_to_text_model
 
 #model = speech_to_text.get_model(model_name)
